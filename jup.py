@@ -1,4 +1,6 @@
 #%%
+print("The quick brown fox")
+#%%
 # %matplotlib inline 
 import matplotlib.pyplot as mt
 import pandas as  pd
@@ -15,10 +17,12 @@ noaa.head()
 #%%
 x = spots.Fdate
 y = spots.Spots
+mt.figure(figsize =(12,8))
 mt.plot(x,y)
-mt.title("The Quick Brown Fox")
+mt.title("Mean Yearly Sunspots")
 mt.xlabel("Year")
 mt.ylabel("Mean Sunspots")
+mt.grid(axis='both')
 mt.show()
 #%%
 # Pull out data for 1955 and plot
@@ -29,7 +33,7 @@ x = s.Month
 y = s.Spots
 mt.figure(figsize =(12,8))
 mt.bar(x,y)
-mt.title("Sunspost for my Year of Birth: 1955")
+mt.title("Sunspost for the Year of my Birth: 1955")
 mt.xlabel("Year")
 mt.ylabel("Mean Sunspots")
 mt.grid(axis='y')
